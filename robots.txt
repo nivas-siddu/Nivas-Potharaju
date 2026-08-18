@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nivaspotharaju.github.io/sitemap.xml
