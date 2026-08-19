@@ -154,14 +154,16 @@
   }
 
   /* ============ ABOUT ============ */
-  .about-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:64px; align-items:start;}
+  .about-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:64px; align-items:stretch;}
   @media (max-width:900px){.about-grid{grid-template-columns:1fr; gap:36px;}}
   .about-copy p{color:#DCE7E4; margin-bottom:16px; font-size:15.5px;}
-  .timeline{list-style:none; display:flex; flex-direction:column; gap:0;}
+  .timeline{list-style:none; display:flex; flex-direction:column; gap:0; height:100%;}
   .timeline li{
-    position:relative; padding:0 0 26px 26px; border-left:1px solid var(--line-dim);
+    position:relative; flex:1; display:flex; flex-direction:column; justify-content:center;
+    padding:0 0 26px 26px; border-left:1px solid var(--line-dim);
   }
   .timeline li:last-child{border-left:1px solid transparent; padding-bottom:0;}
+  @media (max-width:900px){.timeline{height:auto;} .timeline li{flex:none; justify-content:flex-start;}}
   .timeline li::before{
     content:""; position:absolute; left:-5px; top:2px; width:9px; height:9px; border-radius:50%;
     background:var(--ink); border:2px solid var(--amber);
